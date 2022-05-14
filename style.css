@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+:root {
+    /*--- Global styles ---*/
+    --font-size-s: 12px;
+    --font-size-m: 14px;
+    --font-size-l: 16px;
+    --font-size-x: 18px;
+    --font-size-2x: 22px;
+    --font-size-3x: 26px;
+    --font-size-4x: 40px;
+
+    /*--- Product name and current price text styles ---*/
+    --product-name-price-fs: var(--font-size-4x);
+    --product-name-price-fw: 400;
+    --product-name-price-lh: 48px;
+    --product-name-price-color: #505353;
+
+    /*--- Product old price text style ---*/
+    --product-old-price-fs: 26px;
+    --product-old-price-fw: 400;
+    --product-old-price-lh: 31px;
+    --product-old-price-color: rgba(0, 0, 0, .15);
+
+    /*--- Product sale text style ---*/
+    --product-sale-fs: var(--font-size-m);
+    --product-sale-fw: 400;
+    --product-sale-lh: 17px;
+    --product-sale-color: #ffffff;
+
+    /*--- Product description text style ---*/
+    --product-description-fs: var(--font-size-x);
+    --product-description-fw: 400;
+    --product-description-lh: 24px;
+    --product-description-color: #000000;
+}

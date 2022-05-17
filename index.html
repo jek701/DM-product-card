@@ -9,50 +9,204 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="splide-default.min.css">
     <title>Название продукта</title>
 </head>
 <body>
-    <div class="product-image-wrapper">
-
-    </div>
-    <div class="product-info-wrapper">
-        <div class="product-name-block">
-            <h1>Геймпад Microsoft Xbox Series</h1>
-            <span class="mark-block">
-                <img src="images/mark-icon.svg" alt="">
-                <p class="mark">4.8</p>
-            </span>
-        </div>
-        <div class="product-price-block">
-            <p>9.990₽</p>
-            <div class="old-price-block">
-                <p>14.990₽</p>
-                <span class="sale-block">
-                    -33%
-                </span>
-            </div>
-        </div>
-        <div class="product-description-block" id="product-description-block">
-            Познакомьтесь с модернизированным дизайном беспроводного геймпада Xbox (Model 1914) и насладитесь его фигурными поверхностями и изысканной геометрией, которые повышают комфорт во время игры
-        </div>
-        <div class="view-seller-block">
-            <div>
-                <button>Купить на сайте продавца</button>
-                <p class="guide-text">После перехода на сайт продавца Вы сможете завершить покупку и оплатить ее</p>
-            </div>
-            <div class="about-seller-block">
-                <div>
-                    <h3>Новгородский текстильный завод</h3>
-                    <img src="images/info-icon.svg" alt="">
+    <div class="main-wrapper">
+        <div class="product-image-wrapper">
+            <div id="curr-image-index">
+                <div class="image-nav" id="image-nav">
+                    <div onclick="setImage(this.innerHTML)" class="nav-image-wrapper active">
+                        <img src="images/xbox-main.png" class="img" alt="">
+                    </div>
+                    <div onclick="setImage(this.innerHTML)" class="nav-image-wrapper">
+                        <img src="images/xbox-right.png" class="img" alt="">
+                    </div>
+                    <div onclick="setImage(this.innerHTML)" class="nav-image-wrapper">
+                        <img src="images/xbox-top.png" class="img" alt="">
+                    </div>
                 </div>
+                <div class="curr-image" id="curr-image"><img src="images/xbox-main.png" alt=""></div>
+            </div>
+            <div class="hr img-wrapper-hr"></div>
+            <div class="popular-items-wrapper">
+                <h2>Популярные товары </h2>
+                <section class="splide" aria-label="Splide Basic HTML Example">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev">
+                            <img src="images/right-arrow.svg" alt="" style="transform: rotateZ(180deg)">
+                        </button>
+                        <button class="splide__arrow splide__arrow--next">
+                            <img src="images/right-arrow.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="popular-item-block">
+                                    <img src="images/xbox-main.png" alt="">
+                                    <p>
+                                        Геймпад Sony DualSense
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="popular-item-block">
+                                    <img src="images/xbox-main.png" alt="">
+                                    <p>
+                                        Геймпад Sony DualSense
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="popular-item-block">
+                                    <img src="images/xbox-main.png" alt="">
+                                    <p>
+                                        Геймпад Sony DualSense
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="popular-item-block">
+                                    <img src="images/xbox-main.png" alt="">
+                                    <p>
+                                        Геймпад Sony DualSense
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="popular-item-block">
+                                    <img src="images/xbox-main.png" alt="">
+                                    <p>
+                                        Геймпад Sony DualSense
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="popular-item-block">
+                                    <img src="images/xbox-main.png" alt="">
+                                    <p>
+                                        Геймпад Sony DualSense
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="popular-item-block">
+                                    <img src="images/xbox-main.png" alt="">
+                                    <p>
+                                        Геймпад Sony DualSense
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="popular-item-block">
+                                    <img src="images/xbox-main.png" alt="">
+                                    <p>
+                                        Геймпад Sony DualSense
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="product-info-wrapper">
+            <div class="product-name-block">
+                <h1 class="product-name">Геймпад Microsoft Xbox Series</h1>
+                <div class="mark-block">
+                    <img src="images/mark-icon.svg" alt="">
+                    <p class="mark">4.8</p>
+                </div>
+            </div>
+            <div class="product-price-block">
+                <p class="curr-price">9.990₽</p>
+                <div class="old-price-block">
+                    <p class="old-price">14.990₽</p>
+                    <p class="sale-amount">-33%</p>
+                </div>
+            </div>
+            <p class="product-description-invisible" id="product-description-block">Познакомьтесь с модернизированным дизайном беспроводного геймпада Xbox (Model 1914) и насладитесь его фигурными поверхностями и изысканной геометрией, которые повышают комфорт во время игры Познакомьтесь с модернизированным дизайном беспроводного геймпада Xbox (Model 1914) и насладитесь его фигурными поверхностями и изысканной геометрией, которые повышают комфорт во время игры</p>
+            <p class="product-description" id="product-description"></p>
+            <div class="view-seller-block">
                 <div>
+                    <button class="buy-from-seller-btn">Купить на сайте продавца</button>
+                    <p class="guide-text">После перехода на сайт продавца Вы сможете <br> завершить покупку и оплатить ее</p>
+                </div>
+                <div class="about-seller-block">
                     <div>
-                        <p>Проверенный продавец</p>
-
+                        <h3>Новгородский текстильный завод</h3>
+                        <img src="images/info-icon.svg" alt="">
+                    </div>
+                    <div class="about-seller">
+                        <div>
+                            <p class="approved-seller-text">Проверенный продавец</p>
+                            <img src="images/check-mark-icon.svg" alt="">
+                        </div>
+                        <p class="seller-rating">рейтинг 4.6</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="characteristic-active" id="more-info-block">
+                <ul class="more-info-nav" id="more-info-nav">
+                    <li onclick="addFirstClass()">Характеристики</li>
+                    <li onclick="addSecondClass()">Доставка</li>
+                    <li onclick="addThirdClass()">Отзывы</li>
+                    <li onclick="addFourthClass()">Вопросы и ответы</li>
+                    <li onclick="addFifthClass()">Дополнительно</li>
+                </ul>
+                <div class="more-info">
+                    <div class="characteristic">
+                        <p>Материал ........................................ Пластик, металл</p>
+                        <p>Вес ................................................... 350 грамм</p>
+                        <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
+                        <p>Комплектация ............................... Геймпад, провод зарядки</p>
+                        <p>Производитель .............................. Microsoft</p>
+                    </div>
+                    <div class="delivery">
+                        <p>Материал ........................................ Пластик, металл</p>
+                        <p>Вес ................................................... 350 грамм</p>
+                        <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
+                        <p>Комплектация ............................... Геймпад, провод зарядки</p>
+                        <p>Производитель .............................. Microsoft</p>
+                    </div>
+                    <div class="rate">
+                        <p>Материал ........................................ Пластик, металл</p>
+                        <p>Вес ................................................... 350 грамм</p>
+                        <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
+                        <p>Комплектация ............................... Геймпад, провод зарядки</p>
+                        <p>Производитель .............................. Microsoft</p>
+                    </div>
+                    <div class="faq">
+                        <p>Материал ........................................ Пластик, металл</p>
+                        <p>Вес ................................................... 350 грамм</p>
+                        <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
+                        <p>Комплектация ............................... Геймпад, провод зарядки</p>
+                        <p>Производитель .............................. Microsoft</p>
+                    </div>
+                    <div class="more">
+                        <p>Материал ........................................ Пластик, металл</p>
+                        <p>Вес ................................................... 350 грамм</p>
+                        <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
+                        <p>Комплектация ............................... Геймпад, провод зарядки</p>
+                        <p>Производитель .............................. Microsoft</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="splide.min.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        new Splide( '.splide', {
+            pagination: false,
+            perPage: 4,
+        } ).mount();
+    </script>
 </body>
 </html>

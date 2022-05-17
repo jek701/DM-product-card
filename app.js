@@ -1,3 +1,15 @@
+const perPageNum = () => {
+    if (window.screen.width >= 1290) {
+        return 4
+    }
+    else if (window.screen.width < 1290 && window.screen.width >= 690) {
+        return 5
+    }
+    else if (window.screen.width < 690) {
+        return 3
+    }
+}
+
 const readMoreBlock = document.getElementById("product-description-block")
 const text = readMoreBlock.textContent.split("");
 const newDesc = document.getElementById("product-description")

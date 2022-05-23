@@ -7,216 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="splide-default.min.css">
     <title>Геймпад Microsoft Xbox Series</title>
 </head>
 <body>
-    <div class="main-wrapper">
-        <div class="mobile-only">
-            <div class="product-name-block">
-                <h1 class="product-name">Геймпад Microsoft Xbox Series</h1>
-                <div class="mark-block">
-                    <img src="images/mark-icon.svg" alt="">
-                    <p class="mark">4.8</p>
-                </div>
-            </div>
-            <div class="product-price-block">
-                <p class="curr-price">9.990₽</p>
-                <div class="old-price-block">
-                    <p class="old-price">14.990₽</p>
-                    <p class="sale-amount">-33%</p>
-                </div>
+<div class="main-wrapper">
+    <div class="mobile-only">
+        <div class="product-name-block" id="productNameMobile">
+            <h1 class="product-name">Геймпад Microsoft Xbox Series</h1>
+            <div class="mark-block">
+                <img src="images/mark-icon.svg" alt="">
+                <p class="mark">4.8</p>
             </div>
         </div>
-        <div class="product-image-wrapper">
-            <div id="curr-image-index">
-                <div class="image-nav" id="image-nav">
-                    <div onclick="setImage(this.innerHTML)" class="nav-image-wrapper active">
-                        <img src="images/xbox-main.png" class="img" alt="">
-                    </div>
-                    <div onclick="setImage(this.innerHTML)" class="nav-image-wrapper">
-                        <img src="images/xbox-right.png" class="img" alt="">
-                    </div>
-                    <div onclick="setImage(this.innerHTML)" class="nav-image-wrapper">
-                        <img src="images/xbox-top.png" class="img" alt="">
-                    </div>
-                </div>
-                <div class="curr-image" id="curr-image"><img src="images/xbox-main.png" alt=""></div>
-            </div>
-            <div class="hr img-wrapper-hr desktop-only"></div>
-            <div class="popular-items-wrapper desktop-only">
-                <h2>Популярные товары </h2>
-                <section class="splide desktop-only" aria-label="Splide Basic HTML Example">
-                    <div class="splide__arrows">
-                        <button class="splide__arrow splide__arrow--prev">
-                            <img src="images/right-arrow.svg" alt="" style="transform: rotateZ(180deg)">
-                        </button>
-                        <button class="splide__arrow splide__arrow--next">
-                            <img src="images/right-arrow.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="popular-item-block">
-                                    <img src="images/xbox-main.png" alt="">
-                                    <p>
-                                        Геймпад Sony DualSense
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="popular-item-block">
-                                    <img src="images/xbox-main.png" alt="">
-                                    <p>
-                                        Геймпад Sony DualSense
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="popular-item-block">
-                                    <img src="images/xbox-main.png" alt="">
-                                    <p>
-                                        Геймпад Sony DualSense
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="popular-item-block">
-                                    <img src="images/xbox-main.png" alt="">
-                                    <p>
-                                        Геймпад Sony DualSense
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="popular-item-block">
-                                    <img src="images/xbox-main.png" alt="">
-                                    <p>
-                                        Геймпад Sony DualSense
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="popular-item-block">
-                                    <img src="images/xbox-main.png" alt="">
-                                    <p>
-                                        Геймпад Sony DualSense
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="popular-item-block">
-                                    <img src="images/xbox-main.png" alt="">
-                                    <p>
-                                        Геймпад Sony DualSense
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="popular-item-block">
-                                    <img src="images/xbox-main.png" alt="">
-                                    <p>
-                                        Геймпад Sony DualSense
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
+        <div class="product-price-block" id="ProductPriceBlock">
+            <p class="curr-price" id="currPrice"></p>
+            <div class="old-price-block">
+                <p class="old-price" id="oldPrice"></p>
+                <p class="sale-amount" id="saleAmount"></p>
             </div>
         </div>
-        <div class="product-info-wrapper">
-            <div class="desktop-only">
-                <div class="product-name-block">
-                    <h1 class="product-name">Геймпад Microsoft Xbox Series</h1>
-                    <div class="mark-block">
-                        <img src="images/mark-icon.svg" alt="">
-                        <p class="mark">4.8</p>
-                    </div>
+    </div>
+    <div class="product-image-wrapper">
+        <div id="curr-image-index">
+            <div class="image-nav" id="image-nav">
+                <div onclick="setVideo()" class="nav-image-wrapper">
+                    <img src="images/photo-1.webp" class="img" alt="" id="video-player">
                 </div>
-                <div class="product-price-block">
-                    <p class="curr-price">9.990₽</p>
-                    <div class="old-price-block">
-                        <p class="old-price">14.990₽</p>
-                        <p class="sale-amount">-33%</p>
-                    </div>
+                <div onclick="setImage(this.innerHTML)" class="nav-image-wrapper">
+                    <img src="images/photo-1.webp" class="img" alt="">
+                </div>
+                <div onclick="setImage(this.innerHTML)" class="nav-image-wrapper">
+                    <img src="images/photo-2.webp" class="img" alt="">
                 </div>
             </div>
-            <p class="product-description-invisible" id="product-description-block">Познакомьтесь с модернизированным дизайном беспроводного геймпада Xbox (Model 1914) и насладитесь его фигурными поверхностями и изысканной геометрией, которые повышают комфорт во время игры Познакомьтесь с модернизированным дизайном беспроводного геймпада Xbox (Model 1914) и насладитесь его фигурными поверхностями и изысканной геометрией, которые повышают комфорт во время игры</p>
-            <p class="product-description" id="product-description"></p>
-            <div class="view-seller-block">
-                <div>
-                    <button class="buy-from-seller-btn">Купить на сайте продавца</button>
-                    <p class="guide-text">После перехода на сайт продавца Вы сможете <br> завершить покупку и оплатить ее</p>
-                </div>
-                <div class="about-seller-block">
-                    <div>
-                        <h3>Новгородский текстильный завод</h3>
-                        <img src="images/info-icon.svg" alt="">
-                    </div>
-                    <div class="about-seller">
-                        <div>
-                            <p class="approved-seller-text">Проверенный продавец</p>
-                            <img src="images/check-mark-icon.svg" alt="">
-                        </div>
-                        <p class="seller-rating">рейтинг 4.6</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hr"></div>
-            <div class="characteristic-active" id="more-info-block">
-                <ul class="more-info-nav" id="more-info-nav">
-                    <li onclick="addFirstClass()"><p>Характеристики</p></li>
-                    <li onclick="addSecondClass()"><p>Доставка</p></li>
-                    <li onclick="addThirdClass()"><p>Отзывы</p></li>
-                    <li onclick="addFourthClass()"><p>Вопросы и ответы</p></li>
-                    <li onclick="addFifthClass()"><p>Дополнительно</p></li>
-                </ul>
-                <div class="more-info">
-                    <div class="characteristic">
-                        <p>Материал ........................................ Пластик, металл</p>
-                        <p>Вес ................................................... 350 грамм</p>
-                        <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
-                        <p>Комплектация ............................... Геймпад, провод зарядки</p>
-                        <p>Производитель .............................. Microsoft</p>
-                    </div>
-                    <div class="delivery">
-                        <p>Материал ........................................ Пластик, металл</p>
-                        <p>Вес ................................................... 350 грамм</p>
-                        <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
-                        <p>Комплектация ............................... Геймпад, провод зарядки</p>
-                        <p>Производитель .............................. Microsoft</p>
-                    </div>
-                    <div class="rate">
-                        <p>Материал ........................................ Пластик, металл</p>
-                        <p>Вес ................................................... 350 грамм</p>
-                        <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
-                        <p>Комплектация ............................... Геймпад, провод зарядки</p>
-                        <p>Производитель .............................. Microsoft</p>
-                    </div>
-                    <div class="faq">
-                        <p>Материал ........................................ Пластик, металл</p>
-                        <p>Вес ................................................... 350 грамм</p>
-                        <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
-                        <p>Комплектация ............................... Геймпад, провод зарядки</p>
-                        <p>Производитель .............................. Microsoft</p>
-                    </div>
-                    <div class="more">
-                        <p>Материал ........................................ Пластик, металл</p>
-                        <p>Вес ................................................... 350 грамм</p>
-                        <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
-                        <p>Комплектация ............................... Геймпад, провод зарядки</p>
-                        <p>Производитель .............................. Microsoft</p>
-                    </div>
-                </div>
+            <div class="curr-image" id="curr-image-wrapper">
+                <div id="curr-image-block"></div>
             </div>
         </div>
-        <div class="popular-items-wrapper mobile-only">
+        <div class="hr img-wrapper-hr desktop-only"></div>
+        <div class="popular-items-wrapper desktop-only">
             <h2>Популярные товары </h2>
-            <section class="splide" id="slider-mobile" aria-label="Splide Basic HTML Example">
+            <section class="splide desktop-only" aria-label="Splide Basic HTML Example">
                 <div class="splide__arrows">
                     <button class="splide__arrow splide__arrow--prev">
                         <img src="images/right-arrow.svg" alt="" style="transform: rotateZ(180deg)">
@@ -225,69 +60,55 @@
                         <img src="images/right-arrow.svg" alt="">
                     </button>
                 </div>
-                <div class="splide__track">
+                <div id="slider-desktop" class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide">
                             <div class="popular-item-block">
-                                <img src="images/xbox-main.png" alt="">
+                                <div class="recommend-image-wrapper">
+                                    <img src="images/recommend-image-1.jpeg" alt="">
+                                </div>
                                 <p>
-                                    Геймпад Sony DualSense
+                                    Панно «Загнали зайца»
                                 </p>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <div class="popular-item-block">
-                                <img src="images/xbox-main.png" alt="">
+                                <div class="recommend-image-wrapper">
+                                    <img src="images/recommend-image-2.jpg" alt="">
+                                </div>
                                 <p>
-                                    Геймпад Sony DualSense
+                                    Панно настенное "Весна 1945 года!Победа!"
                                 </p>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <div class="popular-item-block">
-                                <img src="images/xbox-main.png" alt="">
+                                <div class="recommend-image-wrapper">
+                                    <img src="images/recommend-image-3.jpeg" alt="">
+                                </div>
                                 <p>
-                                    Геймпад Sony DualSense
+                                    Пасхальница-тортница
                                 </p>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <div class="popular-item-block">
-                                <img src="images/xbox-main.png" alt="">
+                                <div class="recommend-image-wrapper">
+                                    <img src="images/recommend-image-4.jpeg" alt="">
+                                </div>
                                 <p>
-                                    Геймпад Sony DualSense
+                                    Сувенир "Корзина с цветами"
                                 </p>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <div class="popular-item-block">
-                                <img src="images/xbox-main.png" alt="">
+                                <div class="recommend-image-wrapper">
+                                    <img src="images/recommend-image-5.jpeg" alt="">
+                                </div>
                                 <p>
-                                    Геймпад Sony DualSense
-                                </p>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="popular-item-block">
-                                <img src="images/xbox-main.png" alt="">
-                                <p>
-                                    Геймпад Sony DualSense
-                                </p>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="popular-item-block">
-                                <img src="images/xbox-main.png" alt="">
-                                <p>
-                                    Геймпад Sony DualSense
-                                </p>
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="popular-item-block">
-                                <img src="images/xbox-main.png" alt="">
-                                <p>
-                                    Геймпад Sony DualSense
+                                    Сувенир "Корзина с цветами","Розы"
                                 </p>
                             </div>
                         </li>
@@ -296,20 +117,139 @@
             </section>
         </div>
     </div>
+    <div class="product-info-wrapper" id="productInfoDesktop">
+        <div class="desktop-only">
+            <div class="product-name-block">
+                <h1 class="product-name"></h1>
+                <div class="mark-block">
+                    <img src="images/mark-icon.svg" alt="">
+                    <p class="mark">4.8</p>
+                </div>
+            </div>
+            <div class="product-price-block" id="ProductPriceBlockDesktop">
+                <p class="curr-price"></p>
+                <div class="old-price-block">
+                    <p class="old-price"></p>
+                    <p class="sale-amount"></p>
+                </div>
+            </div>
+        </div>
+        <p class="product-description-invisible" id="product-description-block"></p>
+        <p class="product-description" id="product-description"></p>
+        <div class="view-seller-block">
+            <div class="button-wrapper">
+                <a href="https://project5576745.tilda.ws/">
+                    <button class="buy-from-seller-btn">Купить на сайте продавца</button>
+                </a>
+                <p class="guide-text">После перехода на сайт продавца Вы сможете <br> завершить покупку и оплатить ее
+                </p>
+            </div>
+            <div class="about-seller-block">
+                <div class="first-div">
+                    <h3>Новгородский текстильный завод</h3>
+                    <div id="info-btn" class="info-button">
+                        <div id="sellerInfoBlock" class="seller-info-block" onmouseover="addActiveClass('sellerInfoBlock')" onmouseout="addActiveClass('sellerInfoBlock')">
+                            <h3></h3>
+                            <p id="owner"></p>
+                            <p id="ogrn"></p>
+                            <p class="owner-photo">
+                                Публикуется в виде, предоставленном продавцом
+                            </p>
+                        </div>
+                        <img class="info-block-activator" onmouseover="addActiveClass('sellerInfoBlock')" onmouseout="addActiveClass('sellerInfoBlock')" src="images/info-icon.svg" alt="">
+                    </div>
+                </div>
+                <div class="about-seller">
+                    <div>
+                        <p class="approved-seller-text">Проверенный продавец</p>
+                        <img src="images/check-mark-icon.svg" alt="">
+                    </div>
+                    <div class="seller-rating-block" id="sellerRatingBlock">
+                        <h3 class="seller-rating"></h3>
+                        <p class="seller-reviews"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hr"></div>
+        <div class="characteristic-active" id="more-info-block">
+            <ul class="more-info-nav" id="more-info-nav">
+                <li onclick="addFirstClass()"><p>Характеристики</p></li>
+                <li onclick="addSecondClass()"><p>Доставка</p></li>
+                <li onclick="addThirdClass()"><p>Отзывы</p></li>
+                <li onclick="addFourthClass()"><p>Вопросы и ответы</p></li>
+                <li onclick="addFifthClass()"><p>Дополнительно</p></li>
+            </ul>
+            <div class="more-info">
+                <div class="characteristic" id="characteristic">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="delivery">
+                    <p>Материал ........................................ Пластик, металл</p>
+                    <p>Вес ................................................... 350 грамм</p>
+                    <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
+                    <p>Комплектация ............................... Геймпад, провод зарядки</p>
+                    <p>Производитель .............................. Microsoft</p>
+                </div>
+                <div class="rate">
+                    <p>Материал ........................................ Пластик, металл</p>
+                    <p>Вес ................................................... 350 грамм</p>
+                    <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
+                    <p>Комплектация ............................... Геймпад, провод зарядки</p>
+                    <p>Производитель .............................. Microsoft</p>
+                </div>
+                <div class="faq">
+                    <p>Материал ........................................ Пластик, металл</p>
+                    <p>Вес ................................................... 350 грамм</p>
+                    <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
+                    <p>Комплектация ............................... Геймпад, провод зарядки</p>
+                    <p>Производитель .............................. Microsoft</p>
+                </div>
+                <div class="more">
+                    <p>Материал ........................................ Пластик, металл</p>
+                    <p>Вес ................................................... 350 грамм</p>
+                    <p>Техника ........................................... Xbox Series S, Xbox Series X</p>
+                    <p>Комплектация ............................... Геймпад, провод зарядки</p>
+                    <p>Производитель .............................. Microsoft</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popular-items-wrapper mobile-only">
+        <h2>Популярные товары </h2>
+        <section class="splide" id="slider-mobile" aria-label="Splide Basic HTML Example">
+            <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                    <img src="images/right-arrow.svg" alt="" style="transform: rotateZ(180deg)">
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                    <img src="images/right-arrow.svg" alt="">
+                </button>
+            </div>
+            <div id="slider-mobile-wrapper" class="splide__track">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="splide.min.js"></script>
-    <script src="app.js"></script>
-    <script>
-        new Splide( '.splide', {
-            pagination: false,
-            perPage: perPageNum(),
-        } ).mount();
+            </div>
+        </section>
+    </div>
+</div>
 
-        new Splide( '#slider-mobile', {
-            pagination: false,
-            perPage: perPageNum(),
-        } ).mount();
-    </script>
+<script src="splide.min.js"></script>
+<script src="content.js"></script>
+<script src="app.js"></script>
+<script>
+    new Splide('.splide', {
+        pagination: false,
+        perPage: perPageNum(),
+    }).mount();
+
+    new Splide('#slider-mobile', {
+        pagination: false,
+        perPage: perPageNum(),
+    }).mount();
+</script>
 </body>
 </html>

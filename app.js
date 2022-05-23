@@ -1,3 +1,5 @@
+const descLength = 340
+
 const perPageNum = () => {
     if (window.screen.width >= 1290) {
         return 4
@@ -10,13 +12,13 @@ const perPageNum = () => {
     }
 }
 
-const readMoreBlock = document.getElementById("product-description-block")
-const text = readMoreBlock.textContent.split("");
+const readMoreBlock = data.productDescription
+const text = readMoreBlock.split("");
 const newDesc = document.getElementById("product-description")
 const isFull = false
 
 const isSpace = () => {
-    for (i = 184; i < text.length; i++) {
+    for (i = descLength; i < text.length; i++) {
         if (text[i] === " ") {
             return i + 1
         }
@@ -24,7 +26,7 @@ const isSpace = () => {
 }
 
 const showFull = () => {
-    newDesc.innerHTML = readMoreBlock.textContent
+    newDesc.innerHTML = readMoreBlock
 }
 
 if (text.length > 100 && isFull === false) {
@@ -84,13 +86,28 @@ const addFifthClass = () => {
 }
 
 const setImage = (el) => {
-    document.getElementById("curr-image-index").className = el
-    document.getElementById("curr-image").innerHTML = el
+    document.getElementById("curr-image-index").className = el.className
+    document.getElementById("curr-image-block").innerHTML = el
 }
 
-$(document).ready(function () {
-    $(".img").click(function () {
-        $('.nav-image-wrapper').removeClass("active");
-        $(this).parent().addClass("active");
-    });
+const setVideo = () => {
+    document.getElementById("curr-image-block").innerHTML = `
+        <video controls poster="images/photo-1.webp">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    `
+}
+
+const addActiveClass = (el) => {
+    setTimeout(() => {
+        document.getElementById(el).classList.toggle("active")
+    }, 100)
+}
+
+document.querySelector(".img").click(function () {
+    document.querySelector('.nav-image-wrapper').classList.remove("active");
+    document.querySelector(this).parent().classList.add("active");
 });
+
+document.getElementById("slider-mobile-wrapper").innerHTML = document.getElementById("slider-desktop").innerHTML
